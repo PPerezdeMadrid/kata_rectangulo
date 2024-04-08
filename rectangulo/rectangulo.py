@@ -2,6 +2,10 @@
 
 class Rectangulo():
     def __init__(self, xmin, xmax, ymin, ymax):
+        if xmax < xmin:
+            raise ValueError("xmax no puede ser menor que xmin")
+        if ymax < ymin:
+            raise ValueError("ymax no puede ser menor que ymin")
         self.xmin = xmin
         self.xmax = xmax
         self.ymin = ymin

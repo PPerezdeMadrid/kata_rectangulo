@@ -17,6 +17,14 @@ class TestRectangulo(unittest.TestCase):
         area = calcular_area(x,y)
         self.assertEqual(area, 6)
 
+    def test_xmax_menor_que_xmin(self):
+        with self.assertRaises(ValueError):
+            Rectangulo(4, 1, 1, 6)
+
+    def test_ymax_menor_que_ymin(self):
+        with self.assertRaises(ValueError):
+            Rectangulo(1, 4, 6, 3)
+
     def test_calcular_perimetro(self):
         r = Rectangulo(2, 4, 4, 7)
         x, y = obtener_x_y(r.xmin, r.xmax, r.ymin, r.ymax)
