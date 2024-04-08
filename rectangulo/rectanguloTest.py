@@ -37,6 +37,13 @@ class TestRectangulo(unittest.TestCase):
         perimetro = calcular_perimetro(x, y)
         self.assertEqual(perimetro, 2+2+3+3)
 
+    def test_calcular_perimetro_con_numeros_negativos(self):
+        r = Rectangulo(-1, 1, -2, 2)
+        # area de 2*2 + 4*2
+        x, y = obtener_x_y(r.xmin, r.xmax, r.ymin, r.ymax)
+        perimetro = calcular_perimetro(x, y)
+        self.assertEqual(perimetro, 2*2 + 4*2)
+
     def test_calcular_centro(self):
         # la mitad de x y la mitad de y
         r = Rectangulo(1, 4, 2, 6)
