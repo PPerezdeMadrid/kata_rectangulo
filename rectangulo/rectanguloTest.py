@@ -51,6 +51,12 @@ class TestRectangulo(unittest.TestCase):
         self.assertEqual(x_centro, 2.5)
         self.assertEqual(y_centro, 4.0)
 
+    def test_calcular_centro_num_negativo(self):
+        r = Rectangulo(-1, 1, -1, 1)
+        x_centro, y_centro = calcular_centro(r.xmin, r.xmax, r.ymin, r.ymax)
+        self.assertEqual(x_centro, 0.0)
+        self.assertEqual(y_centro, 0.0)
+
     def test_calcular_diagonal(self):
         r = Rectangulo(1, 4, 2, 6)
         x_diagonal, y_diagonal = obtener_diagonal(r)
