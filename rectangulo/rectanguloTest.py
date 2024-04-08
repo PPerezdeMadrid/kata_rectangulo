@@ -30,6 +30,12 @@ class TestRectangulo(unittest.TestCase):
         self.assertEqual(x_centro, 2.5)
         self.assertEqual(y_centro, 4.0)
 
+    def test_calcular_diagonal(self):
+        r = Rectangulo(1, 4, 2, 6)
+        x_diagonal, y_diagonal = obtener_diagonal(r)
+        self.assertEqual(x_diagonal, 1)
+        self.assertEqual(y_diagonal, 6)
+
 
 if __name__ == '__main__':
     unittest.main()
