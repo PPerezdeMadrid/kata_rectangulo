@@ -49,7 +49,9 @@ import unittest
 
 # La clase de prueba
 class MyTestCase(unittest.TestCase):
-    # Método de prueba
+    def setUp(self):
+    self.calculadora = Calculadora()
+    
     def test_suma(self):
         self.assertEqual(2 + 2, 4)
 
