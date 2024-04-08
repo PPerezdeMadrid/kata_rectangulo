@@ -80,6 +80,11 @@ class TestRectangulo(unittest.TestCase):
         r2 = Rectangulo(4.5, 6, 7, 8.5)
         self.assertFalse(r1SeSuperponeAr2(r1, r2))
 
+    def test_superposicion_mismo_lado(self):
+        r1 = Rectangulo(1, 4, 1, 6)
+        r2 = Rectangulo(4, 10, 1, 6)
+        self.assertTrue(r1SeSuperponeAr2(r1, r2))
+
 
 if __name__ == '__main__':
     unittest.main()
