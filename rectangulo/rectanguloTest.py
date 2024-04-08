@@ -1,7 +1,7 @@
 import unittest
 import rectangulo
 from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, calcular_centro
-from rectangulo import obtener_diagonal, seSuperponen
+from rectangulo import obtener_diagonal, r1SeSuperponeAr2
 """
     Capaz de calcular su área
     Capaz de calcular su perímetro
@@ -39,7 +39,7 @@ class TestRectangulo(unittest.TestCase):
     def test_superposicion(self):
         r1 = Rectangulo(1,4,1,6)
         r2 = Rectangulo(3,5,6,7)
-        self.assertEqual(seSuperponen(r1,r2))
+        self.assertTrue(r1SeSuperponeAr2(r1,r2))
 
 
 if __name__ == '__main__':
