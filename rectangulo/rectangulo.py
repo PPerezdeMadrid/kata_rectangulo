@@ -25,3 +25,5 @@ def calcular_centro(xmin, xmax, ymin, ymax):
     y_centro = (float(ymax)-float(ymin))/2 + float(ymin)
     return x_centro, y_centro
 
+def obtener_diagonal(rectangulo):
+    return rectangulo.xmin, rectangulo.ymax

@@ -1,6 +1,6 @@
 import unittest
 import rectangulo
-from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, calcular_centro
+from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, calcular_centro, obtener_diagonal
 
 """
     Capaz de calcular su área
