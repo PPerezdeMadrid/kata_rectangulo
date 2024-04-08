@@ -28,6 +28,15 @@ def calcular_centro(xmin, xmax, ymin, ymax):
 def obtener_diagonal(rectangulo):
     return rectangulo.xmin, rectangulo.ymax
 
-def seSuperponen(r1, r2):
+def r1SeSuperponeAr2(r1, r2):
     # Si xmin está en r2
-    if r1.xmin <
+    if r1.xmin <= r2.xmin <= r1.xmax and r1.ymin <= r2.ymin <= r1.ymax:
+        return True
+    if r2.xmin <= r1.xmin <= r2.xmax and r2.ymin <= r1.ymin <= r2.ymax:
+        return True
+    if r1.xmin <= r2.xmax <= r1.xmax and r1.ymin <= r2.ymax <= r1.ymax:
+        return True
+    if r2.xmin <= r1.xmax <= r2.xmax and r2.ymin <= r1.ymax <= r2.ymax:
+        return True
+    else:
+        return False

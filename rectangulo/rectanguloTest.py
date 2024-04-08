@@ -39,6 +39,7 @@ class TestRectangulo(unittest.TestCase):
     def test_superposicion(self):
         r1 = Rectangulo(1,4,1,6)
         r2 = Rectangulo(3,5,6,7)
+        print(f'Se superponen: {r1SeSuperponeAr2(r1,r2)}')
         self.assertTrue(r1SeSuperponeAr2(r1,r2))
 
 
