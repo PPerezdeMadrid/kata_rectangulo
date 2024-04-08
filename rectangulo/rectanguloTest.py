@@ -10,13 +10,6 @@ from rectangulo import obtener_diagonal, r1SeSuperponeAr2
     Capaz de comprobar si se superpone con otro rectángulo (defina el criterio de superposición)
     """
 class TestRectangulo(unittest.TestCase):
-
-    def test_calcular_area(self):
-        r = Rectangulo(2,4,4,7)
-        x,y= obtener_x_y(r.xmin, r.xmax, r.ymin, r.ymax)
-        area = calcular_area(x,y)
-        self.assertEqual(area, 6)
-
     def test_xmax_menor_que_xmin(self):
         with self.assertRaises(ValueError):
             Rectangulo(4, 1, 1, 6)
@@ -24,6 +17,19 @@ class TestRectangulo(unittest.TestCase):
     def test_ymax_menor_que_ymin(self):
         with self.assertRaises(ValueError):
             Rectangulo(1, 4, 6, 3)
+    def test_calcular_area(self):
+        r = Rectangulo(2,4,4,7)
+        x,y= obtener_x_y(r.xmin, r.xmax, r.ymin, r.ymax)
+        area = calcular_area(x,y)
+        self.assertEqual(area, 6)
+
+    def test_calcular_area_con_numeros_negativos(self):
+        r = Rectangulo(-1, 1, -2, 2)
+        # area de 2 x 4
+        x, y = obtener_x_y(r.xmin, r.xmax, r.ymin, r.ymax)
+        area = calcular_area(x, y)
+        self.assertEqual(area, 2*4)
+
 
     def test_calcular_perimetro(self):
         r = Rectangulo(2, 4, 4, 7)
