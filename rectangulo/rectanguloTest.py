@@ -1,6 +1,6 @@
 import unittest
 import rectangulo
-from rectangulo import Rectangulo, obtener_x_y, calcular_area
+from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro
 
 
 # La clase de prueba

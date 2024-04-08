@@ -16,3 +16,6 @@ def obtener_x_y(xmin, xmax, ymin, ymax):
 
 def calcular_area(x,y):
     return x*y
+
+def calcular_perimetro(x,y):
+    return 2*x+2*y
