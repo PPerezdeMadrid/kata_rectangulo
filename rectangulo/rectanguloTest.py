@@ -63,11 +63,22 @@ class TestRectangulo(unittest.TestCase):
         self.assertEqual(x_diagonal, 1)
         self.assertEqual(y_diagonal, 6)
 
+    def test_calcular_diagonal_num_negativos(self):
+        r = Rectangulo(-2, 2, -2, 6)
+        x_diagonal, y_diagonal = obtener_diagonal(r)
+        self.assertEqual(x_diagonal, -2)
+        self.assertEqual(y_diagonal, 6)
+
+
     def test_superposicion(self):
         r1 = Rectangulo(1,4,1,6)
         r2 = Rectangulo(3,5,6,7)
-        print(f'Se superponen: {r1SeSuperponeAr2(r1,r2)}')
         self.assertTrue(r1SeSuperponeAr2(r1,r2))
+
+    def test_no_se_superponen(self):
+        r1 = Rectangulo(1, 4, 1, 6)
+        r2 = Rectangulo(4.5, 6, 7, 8.5)
+        self.assertFalse(r1SeSuperponeAr2(r1, r2))
 
 
 if __name__ == '__main__':
