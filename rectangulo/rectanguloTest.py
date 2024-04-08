@@ -3,9 +3,12 @@ import unittest
 
 # La clase de prueba
 class TestRectangulo(unittest.TestCase):
-    # Método de prueba
-    def test_suma(self):
-        self.assertEqual(2 + 2, 4)
+
+    def calcular_area(self):
+        r = Rectangulo(2,4,4,7)
+        x,y= r.obtener_x_y()
+        area = r.calcular_area()
+        self.assertEqual(area, 6)
 
     def test_resta(self):
         self.assertEqual(5 - 3, 2)
