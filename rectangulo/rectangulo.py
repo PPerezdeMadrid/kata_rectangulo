@@ -19,3 +19,8 @@ def calcular_area(x,y):
 
 def calcular_perimetro(x,y):
     return 2*x+2*y
+
+def calcular_centro(xmin, xmax, ymin, ymax):
+    x_centro = (float(xmax)-float(xmin))/2 + float(xmin)
+    y_centro = (float(ymax)-float(ymin))/2 + float(ymin)
+    return x_centro, y_centro

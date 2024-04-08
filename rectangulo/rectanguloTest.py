@@ -1,6 +1,6 @@
 import unittest
 import rectangulo
-from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, obtener_centro
+from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, calcular_centro
 
 """
     Capaz de calcular su área
@@ -26,7 +26,7 @@ class TestRectangulo(unittest.TestCase):
     def test_calcular_centro(self):
         # la mitad de x y la mitad de y
         r = Rectangulo(1, 4, 2, 6)
-        x_centro, y_centro = obtener_centro(r.xmin, r.xmax, r.ymin, r.ymax)
+        x_centro, y_centro = calcular_centro(r.xmin, r.xmax, r.ymin, r.ymax)
         self.assertEqual(x_centro, 2.5)
         self.assertEqual(y_centro, 4.0)
 
