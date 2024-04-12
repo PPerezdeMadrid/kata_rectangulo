@@ -1,5 +1,5 @@
 import unittest
-import rectangulo
+
 from rectangulo import Rectangulo, obtener_x_y, calcular_area, calcular_perimetro, calcular_centro
 from rectangulo import obtener_diagonal, r1SeSuperponeAr2
 """
@@ -8,7 +8,7 @@ from rectangulo import obtener_diagonal, r1SeSuperponeAr2
     Capaz de calcular su centro
     Capaz de calcular su diagonal
     Capaz de comprobar si se superpone con otro rectángulo (defina el criterio de superposición)
-    """
+"""
 class TestRectangulo(unittest.TestCase):
     def test_xmax_menor_que_xmin(self):
         with self.assertRaises(ValueError):

@@ -1,4 +1,8 @@
 # Katas 
+Lo más importante es que lo expliques en la documentación
+- Qué archivos tienes
+- Cómo se ejecuta la aplicación
+
 
 ## Credenciales
 Si tienes que meter el nombre y la contraseña con cada git push:
@@ -10,7 +14,7 @@ Si tienes que meter el nombre y la contraseña con cada git push:
 ```
 ## Unittest
 
-1. **Importar `unittest`**: Comienza importando el módulo `unittest`.
+1. **Importar `unittest`**
 
 ```python
 import unittest
