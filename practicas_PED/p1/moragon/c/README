@@ -1,0 +1,10 @@
+Manual de usuario.
+
+PARA EJECUTAR ESTE CODIGO SE DEBE:
+
+* TENER INSTALADO LA HERRAMIENTA "gcc" PARA COMPILAR C.
+(Si desea utilizar otro compilador debe cambiarlo en el makefile, o ejecutarlo a mano desde terminal).
+
+* EJECUTAR: 
+# make compile
+# ./ejecutable

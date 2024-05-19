@@ -1,7 +1,12 @@
 # Katas 
 Lo más importante es que lo expliques en la documentación
-- Qué archivos tienes
-- Cómo se ejecuta la aplicación
+- Instalación
+    + Que sistema operativo tienes
+    + Te tienes que descargar python
+    + bla bla bla
+- Ejecución
+    + Qué archivos tienes
+    + Cómo se ejecuta la aplicación
 
 
 ## Credenciales
